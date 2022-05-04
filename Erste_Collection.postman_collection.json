@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "7361daff-a580-410f-839e-932b304107bd",
+		"name": "Erste_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "zippotamus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.zippopotam.us/DE/27367",
+					"host": [
+						"api",
+						"zippopotam",
+						"us"
+					],
+					"path": [
+						"DE",
+						"27367"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "1217a09e-b689-41fe-a1db-8dac24c66a6e",
+		"name": "NXAPI_REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token_anfordern",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"aaaUser\": {\n    \"attributes\": {\n      \"name\": \"admin\",\n      \"pwd\": \"cisco\"\n}}}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{nxos-1}}/api/aaaLogin.json",
+					"protocol": "http",
+					"host": [
+						"{{nxos-1}}"
+					],
+					"path": [
+						"api",
+						"aaaLogin.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_VLAN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"bdEntity\": {\n  \"children\": [\n    {\n      \"l2BD\": {\n        \"attributes\": {\n          \"fabEncap\": \"vlan-99\",\n          \"pcTag\": \"1\"\n}}}]}} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{nxos-1}}/api/mo/sys/bd.json",
+					"protocol": "http",
+					"host": [
+						"{{nxos-1}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"bd.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_VLANs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{nxos-1}}/api/mo/sys/bd.json?query-target=children&rsp-prop-include=naming-only",
+					"protocol": "http",
+					"host": [
+						"{{nxos-1}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"bd.json"
+					],
+					"query": [
+						{
+							"key": "query-target",
+							"value": "children"
+						},
+						{
+							"key": "rsp-prop-include",
+							"value": "naming-only"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "nxos-1",
+			"value": "192.168.181.21",
+			"type": "default"
+		}
+	]
+}

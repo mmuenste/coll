@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "5af0111a-e447-4ff6-9569-56893448dce0",
+		"name": "RESTCONF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Web_Host_Meta_Data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.181.11/restconf/data/ietf-yang-library:modules-state",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-yang-library:modules-state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restconf",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.181.11/restconf",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"11"
+					],
+					"path": [
+						"restconf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restconf/data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.181.11/restconf/data/",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Interface Description",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang.data+json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://192.168.181.21/restconf/data/openconfig-interfaces:interfaces/interface=eth1%2F1/config/description",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"21"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=eth1%2F1",
+						"config",
+						"description"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Configure Description",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang.data+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Das ist das neue Interface von Matthias\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.181.21/restconf/data/openconfig-interfaces:interfaces/interface=eth1%2F1/config",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"21"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=eth1%2F1",
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Yang-Module",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.181.21/restconf/data/ietf-yang-library:modules-state",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"21"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-yang-library:modules-state"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "15ceb7e0-62e7-4d4d-8510-4fbabc92d5d1",
+		"name": "RKI_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Germany",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.corona-zahlen.org/germany",
+					"protocol": "https",
+					"host": [
+						"api",
+						"corona-zahlen",
+						"org"
+					],
+					"path": [
+						"germany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Districts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.corona-zahlen.org/districts/09674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"corona-zahlen",
+						"org"
+					],
+					"path": [
+						"districts",
+						"09674"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "States",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.corona-zahlen.org/states",
+					"protocol": "https",
+					"host": [
+						"api",
+						"corona-zahlen",
+						"org"
+					],
+					"path": [
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HEAD-States",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "https://api.corona-zahlen.org/states",
+					"protocol": "https",
+					"host": [
+						"api",
+						"corona-zahlen",
+						"org"
+					],
+					"path": [
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.corona-zahlen.org/states/HE",
+					"protocol": "https",
+					"host": [
+						"api",
+						"corona-zahlen",
+						"org"
+					],
+					"path": [
+						"states",
+						"HE"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
